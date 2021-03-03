@@ -13,6 +13,8 @@ def addToInventory(inventory, addedItems):
     for item in addedItems:
         if item in inventory:
             inventory[item] += 1
+        elif item not in inventory:
+            inventory[item] = 1
     return inventory
 
 inv = {'gold coin': 42, 'rope': 1}
